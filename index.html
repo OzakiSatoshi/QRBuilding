@@ -2,44 +2,26 @@
 <html>
 <head>
 
+  <meta charset="utf-8">
+  <!-- A-Frame ライブラリの読み込み※GIFはV0.9.0で動く -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- AR.js ライブラリの読み込み -->
+  <script src='https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js'></script>
+  <!-- glTFに含まれたアニメーションを再生するためにaframe-extrasをロード -->
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+  <!-- shaderライブラリ -->
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="shader-grid-glitch.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGSF0F0XB"></script>
-    
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-FHGSF0F0XB');
-    </script>
-  -->
-  
-
-<meta charset="utf-8">
-<!-- A-Frame ライブラリの読み込み※GIFはV0.9.0で動く -->
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<!-- AR.js ライブラリの読み込み -->
-<script src='https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js'></script>
-<!-- glTFに含まれたアニメーションを再生するためにaframe-extrasをロード -->
-<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
-<!-- shaderライブラリ -->
-<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-<script src="shader-grid-glitch.js"></script>
-
-<link rel="stylesheet" href="style.css">
-<title>建物AR</title>
+  <link rel="stylesheet" href="style.css">
+  <title>建物AR</title>
 </head>
 
 <body style="margin : 0px; overflow: hidden">
 
-<!-- <div id="controls">
-  <audio id="audio" type="audio/mpeg" src="assets/harunoumi.mp3" controls></audio>
-</div> -->
-
-<body>
-  <div class="arjs-loader">
-</div>
+  <body>
+    <div class="arjs-loader">
+  </div>
 
 
 
