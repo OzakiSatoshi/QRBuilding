@@ -25,65 +25,27 @@
 
 
 
-<!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
-<a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-        <!-- Assetの用意 -->  
-        <!-- 3Dモデル -->
-        <a-asset-item id="Castle" src="assets/Castle.glb"></a-asset-item>
-        <!-- <a-asset-item id="oumi" src="assets/oumi.mp3"></a-asset-item> -->
-        <!-- サウンド設定 -->
-        <!-- <a-assets>
-          <audio id="oumi" src="assets/oumi.mp3" autoplay="true"></audio>
-        </a-assets> -->
-        <!-- <a-sound id="my_sound01" src="#oumi" autoplay="true" position="0 1.25 -5" volume="0" loop="true"></a-sound> -->
+  <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
+  <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
+    <!-- Assetの用意 -->  
+      <!-- 3Dモデル -->
+      <a-asset-item id="Castle" src="assets/Castle.glb"></a-asset-item>
         
-        
-        <!-- gifファイル -->
-        <!-- 
-          <a-assets>
-            <img id="usi" src="/assets/usi.gif">
-          </a-assets> 
-        -->
-        
-        <!-- 『.patt』ファイルを読み込む -->
-  <a-marker preset="custom" type="pattern" url="Castle.patt" >
+      <!-- 『.patt』ファイルを読み込む -->
+      <a-marker preset="custom" type="pattern" url="Castle.patt" >
+      
+      <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear"></a-animation>
+
+      <!-- 3Dモデルを表示 -->
+      <a-entity
+          gltf-model="#Castle" 
+          scale="5 5 5" 
+          animation-mixer>
+      </a-entity>
     
-    <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear"></a-animation>
-
-   <!-- 3Dモデルを表示 -->
-   <a-entity
-            gltf-model="#Castle" 
-            scale="5 5 5" 
-            animation-mixer>
-          </a-entity>
-
-   <!-- GIFを表示 -->
-   <!-- scale 右、上、？ -->
-   <!-- position 右、空、上？ -->
-   <!--
-     <a-entity
-                scale="4.5 3 1"
-                position="1.2 0 0.5"
-                geometry="primitive: plane;"
-                material="shader:gif; src:#usi;
-                color:white;
-                opacity:1"
-                rotation="-90 0 0">
-     </a-entity>
-   -->
-   
-    <!-- 画像を表示 -->
-     <!--<a-image id="usi" src="#usi" position="0 0 0" rotation="-90 0 0">
-       <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear">
-       </a-animation>
-     </a-image> -->
-  
-  </a-marker>
-  <a-entity camera></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
 
   </a-scene>
-
-  
-  
-  </body>
+</body>
 </html>
