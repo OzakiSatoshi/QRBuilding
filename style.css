@@ -1,0 +1,12 @@
+#controls
+{
+  margin: auto;
+  z-index:10000;
+  width: 300px;
+}
+
+#audio
+{
+ margin:auto;
+ z-index:10001;
+}
