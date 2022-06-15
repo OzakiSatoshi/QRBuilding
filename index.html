@@ -2,9 +2,9 @@
 <html>
   <head>
     <!-- A-Frameを読み込む -->
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <!-- AR.jsを読み込む -->
-    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
   </head>
   <body>
@@ -12,9 +12,6 @@
       <!-- 城のオブジェクトを配置 -->
       <a-asset-item id = "castre" src = "assets/Castle.glb"></a-asset-item>
       <a-gltf-model src = "#castre" scale = "3 3 3" position="0 -2 -8"></a-gltf-model>
-
-      <div class="a-enter-ar" aframe-injected=""><button class="a-enter-ar-button" title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information." aframe-injected=""></button></div>
-      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
