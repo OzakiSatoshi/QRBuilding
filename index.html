@@ -28,6 +28,12 @@
           };
         })()
       });
+
+      const sceneEl = document.querySelector('a-scene');
+        sceneEl.addEventListener('loaded', () => {
+            sceneEl.camera = new THREE.PerspectiveCamera();
+        });
+
     </script>
 </head>
   </head style="margin: 0; overflow: hidden">
