@@ -34,7 +34,13 @@
         })()
       });
 
-      
+      document.addEventListener(
+        'touchmove',
+        (event: any) => {
+          event.preventDefault();
+        },
+        { passive: false },
+      );
      
     </script>
 </head>
