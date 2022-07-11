@@ -11,18 +11,13 @@
       // document.querySelector('.touchmove').addEventListener('touchmove', function(e) {
       //   e.preventDefault();
       // });
-
-      //スクロール禁止
-      function handle(event) {
-      event.preventDefault();
-      };
-
-      window.onload = function() {
-        document.addEventListener('touchmove', handle, { passive: false });
-        document.addEventListener('mousewheel', handle, { passive: false });
-      };
     </script>
 
+    <style>
+      body{
+        touch-action: none;
+      }
+    </style>
   </head style="margin: 0; overflow: hidden">
 
   <body>
